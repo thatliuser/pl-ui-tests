@@ -1,0 +1,6 @@
+{
+    "controller": "drag-drop.py",
+    "dependencies": {
+        "nodeModulesScripts": ["jquery-ui-dist/jquery-ui.js"]
+    }
+}
