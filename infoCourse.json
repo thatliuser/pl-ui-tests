@@ -1,0 +1,22 @@
+{
+    "uuid": "9a1e9733-c816-4c08-81cd-0de5c12124f7",
+    "name": "UI Tests",
+    "title": "UI Tests",
+    "options": {
+        "useNewQuestionRenderer": true
+    },
+    "assessmentSets": [
+        {
+            "abbreviation": "Test 1",
+            "name": "Test 1",
+            "heading": "Tests",
+            "color": "orange1"
+        }
+    ],
+    "topics": [
+        {
+            "name": "Tests",
+            "color": "orange1"
+        }
+    ]
+}
