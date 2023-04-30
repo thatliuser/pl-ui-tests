@@ -1,8 +1,26 @@
 <script>
     $(document).ready(() => {
-        $("#draggable").draggable();
+        $(".droppable").droppable({
+            drop: (event, ui) => {
+                $(this).find("p").html("Yay!");
+            }
+        });
+        $(".draggable").draggable({
+            snap: ".droppable",
+            snapMode: "inner",
+            revert: "invalid"
+        });
     });
 </script>
-<div id="draggable">
-    <p>Thing</p>
-</div>
+
+<ul>
+    {{#answers}}
+    <li class="droppable">{{name}}</li>
+    {{/answers}}
+</ul>
+
+<ul>
+    {{#options}}
+    <li class="draggable">{{name}}</li>
+    {{/options}}
+</ul>
