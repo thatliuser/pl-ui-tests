@@ -1,0 +1,28 @@
+div.drag-drop-container {
+    display: block;
+    box-shadow: 2px #888888;
+    border-radius: 4px;
+    background-color: #eeeeee;
+    border: 1px solid #9e9e9e;
+    width: calc(50% - 16px);
+    margin: 8px;
+}
+
+li:hover {
+  cursor: move; /* For UX: The answer tiles shows a 'grab' cursor on mouse over */
+  outline: 2px solid blue;
+  outline-offset: -2px;
+}
+
+.drag-drop-container > ul {
+  padding: 17px 17px 17px 17px;
+  height: 100%;
+  margin-bottom: 0px;
+}
+
+.drag-drop-container li {
+  margin-bottom: 5px;
+  border: 1px solid grey !important;
+  border-radius: 5px !important;
+  line-height: 1.2em;
+}

@@ -13,14 +13,22 @@
     });
 </script>
 
-<ul>
+<div class="d-flex flex-wrap">
     {{#answers}}
-    <li class="droppable">{{name}}</li>
+    <div class="drag-drop-container">
+        <div class="card-header list-group-item-primary">{{name}}</div>
+        <ul class="card-body list-group">
+            <li class="list-group-item droppable">Hi</li>
+        </ul>
+    </div>
     {{/answers}}
-</ul>
 
-<ul>
-    {{#options}}
-    <li class="draggable">{{name}}</li>
-    {{/options}}
-</ul>
+    <div class="drag-drop-container">
+        <div class="card-header list-group-item-primary">Options</div>
+        <ul class="card-body list-group">
+            {{#options}}
+            <li class="list-group-item draggable">{{name}}</li>
+            {{/options}}
+        </ul>
+    </div>
+</div>
