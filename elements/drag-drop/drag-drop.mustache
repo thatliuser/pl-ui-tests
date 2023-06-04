@@ -1,14 +1,8 @@
 <script>
     $(document).ready(() => {
-        $(".droppable").droppable({
-            drop: (event, ui) => {
-                $(this).find("p").html("Yay!");
-            }
-        });
-        $(".draggable").draggable({
-            snap: ".droppable",
-            snapMode: "inner",
-            revert: "invalid"
+        const sortables = ".sortable";
+        $(sortables).sortable({
+            connectWith: sortables,
         });
     });
 </script>
@@ -17,17 +11,17 @@
     {{#answers}}
     <div class="drag-drop-container">
         <div class="card-header list-group-item-primary">{{name}}</div>
-        <ul class="card-body list-group">
-            <li class="list-group-item droppable">Hi</li>
+        <ul class="card-body list-group sortable">
+            <li class="list-group-item">Hi</li>
         </ul>
     </div>
     {{/answers}}
 
     <div class="drag-drop-container">
         <div class="card-header list-group-item-primary">Options</div>
-        <ul class="card-body list-group">
+        <ul class="card-body list-group sortable">
             {{#options}}
-            <li class="list-group-item draggable">{{name}}</li>
+            <li class="list-group-item">{{name}}</li>
             {{/options}}
         </ul>
     </div>
