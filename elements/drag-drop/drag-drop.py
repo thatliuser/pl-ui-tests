@@ -32,8 +32,20 @@ def prepare(element_html: str, data: pl.QuestionData) -> None:
     element = fragment_fromstring(element_html)
 
     # TODO: Improve attribs (https://github.com/PrairieLearn/PrairieLearn/blob/master/elements/pl-matching/pl-matching.py)
+    # Throws error if element is invalid
+    """ def check_attribs(
+        element: lxml.html.HtmlElement,
+        required_attribs: list[str],
+        optional_attribs: list[str],
+    ) -> None """
     pl.check_attribs(element, ["answers-name"], [])
+
     # Get the name we should put under data["params"]
+    # If answers-name="answers", then name = "answers"
+    """ def get_string_attrib(
+        element: lxml.html.HtmlElement,
+        name: str
+    ) -> str """
     name = pl.get_string_attrib(element, "answers-name")
 
     # Get option to answer map
